@@ -1,0 +1,391 @@
+*{
+	margin:0;
+	padding:0;
+	list-style:none;
+	box-sizing:border-box;
+	text-decoration:none;
+	font-family:lato,san serif;
+}
+body{background-image: url("./img/font_body.jpg");background-size: cover;}
+
+.father{
+	width:100%;	
+	display:flex;
+	flex-flow:row wrap;
+	justify-content:;
+	/*background:#2E4053;*/
+}
+header{
+	
+	margin:20px;
+	width:100%;
+	display:flex;
+	flex-flow:row nowrap;
+	justify-content:space-between;
+	align-items:center;
+
+}
+.redes{
+	
+	display:flex;
+	flex-flow:row nowrap;
+	height:auto;
+}
+.redes li{
+			
+	width:auto;	
+	color:white;
+	margin:8px;
+	padding:10px;
+	cursor:pointer;
+	
+}
+.redes li:hover{color:red;}
+.redes li:active{
+	color:aqua;
+	border-radius:20px;
+	padding:9px;
+}
+
+/*fin de la seccion redes sociales*/
+ 
+.menu {
+
+	 margin:0;
+   	 display:flex;
+	 flex-direction:row;
+	 flex-wrap:wrap;
+	 align-items:center;
+	 background:;
+	 border:none;
+	flex:0 0 30%;
+}
+
+li a{
+	margin:0;
+	padding:10px;
+	color:white;
+	transition:0.5s linear;
+	opacity:1;
+}
+li a:hover{
+	border:1px solid silver;
+	border-radius:10px;
+	opacity:.8;
+}
+input{
+	
+	background-image: url("./icons/search.png");
+	background-repeat: no-repeat;
+	background-attachment:scroll; 
+	background-size:15px 15px; 
+
+}
+#input{
+	display:flex;
+	width:25px;
+	outline:none;
+	background-color: transparent;
+	border:none;
+	/*border-radius:20px;*/
+	transition:width 1s linear;
+	cursor: pointer;
+}
+/*#input:hover{
+	outline:none;
+	border:none;
+	border-top:1px solid black;
+	background:white;
+	width:120px;
+	/*con width o sin width queda mejor sin width
+} */
+#input:focus{
+	width:120px; 
+	background-image:none;
+	/*background-color:gray;*/
+	border-bottom:2px solid red; 
+	color:white; 
+	border-radius: 3px;
+
+}
+label,#lab{display:none;}
+/*Fin del header*/
+
+
+/*INICIO del section */
+section{
+	width:100%;
+	display:flex;
+	flex-flow:row wrap;
+	justify-content:center;
+	align-items:center;
+	background:;
+	line-height:;
+	margin:40px;
+}
+article{
+	display:flex;
+	flex-flow:row wrap;
+	justify-content:center;
+	align-items:center;
+	/*width:70%;*/
+	
+}
+h1{
+	font-size:40px;
+	font-weight:1000;
+	color:white;
+	text-align: center;
+}
+.serv{color:red;margin-left:10px;}
+
+
+
+
+/*Inicio  de carousel*/
+.carousel{
+	width:100%;
+	height: auto;
+	overflow:hidden;	
+
+}
+.conte {
+	width:300%;
+	height:250px;
+	display:flex;
+	overflow:hidden;
+}
+ .conte li{
+	width:100%;
+/*border:1px solid red; //borde de referencia */
+	animation:vik 9s infinite;
+	animation-timing-function: cubic-bezier(0.96,0.97,0.97,0.99);
+}
+.ploit{
+	width:90%; 
+	font-size:19px;
+	color:white;
+	text-align:center;
+	margin-top:120px  
+	
+}
+#imagen{
+	margin: 0 50px 0 0; 
+	position:absolute; 
+	left: 300px;
+	right: 0;
+	bottom: 0;
+	top:0; 
+	opacity:0.7; 
+}
+#imagen1{
+
+	position:absolute; 
+	left: 280px;
+	right: 0;
+	bottom: 0;
+	top:0; 
+	opacity:0.7; 
+}
+@keyframes vik{
+	0%{transform:translateX(-0%);}
+	33%{transform:translateX(-1%);}
+	/*1.6667*/
+	
+	33.33%{transform:translateX(-98%);}
+	66.67%{transform:translateX(-100%);}
+  
+	/*1.6667*/
+	
+	67%{transform:translateX(-198%);}
+	100%{transform:translateX(-200%);}
+
+	/*1.6667=5s*/
+}
+
+
+/*fin de carousel*/
+
+
+/*.button{display:flex;}*/
+button{
+	margin:50px 0;		
+	width:120px;
+  	height:40px;
+	border:none;
+	border:1px solid silver;
+	background:transparent;
+	border-radius:10px;
+	transition:.2s linear;
+}
+button a{
+	 
+	 padding:10px;
+	 font-size:17px;
+	 font-weight:500;
+	 color:white;
+	
+}
+button:hover{background:#5D6D7E;}
+
+button:active{
+	
+	background:#1B2631;
+	transition:0.5s linear;
+	width:123px;
+	height:45px;
+}
+
+/*Para sidebars*/
+aside{
+	/*display:flex;
+	width:30%;*/
+}
+footer{
+	
+	
+}
+/*para tablets*/
+@media screen and (max-width:840px){
+	 
+header,.menu,section,article,button{
+			
+		display:flex;
+		flex-flow:column wrap;
+	}
+p{margin-top: 12px;}
+.menu{
+	
+		display:flex; /*porque*/
+		flex-flow:row wrap;
+		align-items:center;
+			
+	}
+.menu li a {
+		display:inline-block;
+		width:100%;
+		margin:-2px;
+				
+	}
+	
+h1{
+		display:flex;
+		flex-flow:row wrap;
+		justify-content:center;	
+		
+	}
+label,#lab{display:none;}	
+
+
+.ploit{padding:0 5px 0 0; }
+#imagen{
+		width:100%; 
+		padding: 0 15px 0 10px;
+		position:absolute; 
+		left: 0;
+		right: 0;
+		bottom: 0;
+		top:0; 
+		opacity:0.7; 
+}
+#imagen1{
+		width:100%; 
+		padding-right: 6px; 
+		position:absolute; 
+		left: 0;
+		right: 0;
+		bottom: 0;
+		top:0; 
+		opacity:0.7; 
+}
+
+
+/*phones*/
+@media screen and (max-width:500px){
+	
+body{background:;}
+header,.redes,.menu,article,section{display:flex;}	
+h1,{text-align:center;}
+p{font-size:14px;}	
+	/*ocultacion del menu y aparicion del showmenu*/
+	/**/
+	/**/
+.menu,input{display:none;}
+	
+label i{
+
+		color:white;
+		cursor:pointer;
+		transition:.4s linear;	
+		
+	}
+label i:hover{color:aqua;}
+label{display:flex;}
+	/*para ocultar en normal y max-width:800px*/
+	/*-------------------------------*/
+.toch:checked~.menu{
+		display:flex;
+		flex-flow:row wrap;
+		justify-content:center;
+		border-top:1px solid white;
+	}
+	/*search horinzontal*/
+	/*habia 2  formas de hacer el search tipo button, haciendo practicamente lo mismo con el showmenu*/
+.res {
+		width:100%;
+		/*border:2px solid red;*/
+		margin-top:5px;
+		display:flex;
+		flex-flow:row wrap;
+		justify-content:center;
+	}
+#input{border-radius:30px;}
+	/*#input:hover{
+		width:100%;
+	}*/
+#input:focus{
+		width:100%;
+		color:white;
+		background:transparent;
+		border-bottom: 2px solid red;
+	}
+.conte {
+	width:300%;
+	height:350px;
+	display:flex;
+	overflow:hidden;
+}
+#imagen{
+	width:400px; 
+	position:absolute; 
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top:0; 
+	opacity:0.7; 
+}
+#imagen1{
+	width: 400px;
+	position:absolute; 
+	left: 0px;
+	right: 0;
+	bottom: 0;
+	top:0; 
+	opacity:0.7; 
+}
+@keyframes vik{
+	0%{transform:translateX(-0%);}
+	33%{transform:translateX(-0%);}
+	/*1.6667*/
+	
+	33.33%{transform:translateX(-100%);}
+	66.67%{transform:translateX(-100%);}
+  
+	/*1.6667*/
+	
+	67%{transform:translateX(-208%);}
+	100%{transform:translateX(-200%);}
+
+	/*1.6667=5s*/
+}
+}
