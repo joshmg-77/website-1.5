@@ -10,6 +10,7 @@ body{background-image: url("./img/font_body.jpg");background-size: cover;}
 
 .father{
 	width:100%;	
+	height:auto;
 	display:flex;
 	flex-flow:row wrap;
 	justify-content:;
@@ -74,7 +75,7 @@ header{
 	
 }
 
-li a{
+li .losA{
 	margin:0;
 	padding:10px;
 	color:white;
@@ -82,7 +83,7 @@ li a{
 	opacity:1;
 	border:1px solid transparent;
 }
-li a:hover{
+li .losA:hover{
 	background:#5D6D7E; 
 	border:1px solid silver;
 	border-radius:10px;
@@ -138,11 +139,13 @@ section{
 	align-items:center;
 	background:;
 	line-height:;
-	margin:40px;
+	
 }
 article{
+	width: 100%;
+	margin-top: 70px;
 	display:flex;
-	flex-flow:row wrap;
+	flex-flow:column wrap;
 	justify-content:center;
 	align-items:center;
 	/*width:70%;*/
@@ -153,6 +156,7 @@ h1{
 	font-weight:1000;
 	color:white;
 	text-align: center;
+    
 }
 .serv{color:red;margin-left:10px;}
 
@@ -168,28 +172,50 @@ h1{
 }
 .conte {
 	width:300%;
-	height:250px;
+	height:75px;
 	display:flex;
+	justify-content:center;
+	align-items: center;   
 	overflow:hidden;
+    
 }
- .conte li{
+ .conte li {
 	width:100%;
 /*border:1px solid red; //borde de referencia */
-	
-	animation:vik 9s infinite;
+   height:auto;
+
+	display:flex;
+	justify-content: center;
+	color:white;
+	animation:vik 7s infinite alternate;
 	animation-timing-function: cubic-bezier(0.96,0.97,0.97,0.99);
 
 }
+.conte li a{
+
+	 align-self: center;
+	 color:white;
+     margin:0 40px;
+     padding:20px;
+ }
+ .conte li a:hover{
+	color:black;
+    background:#85C1E9; 
+    padding:20px;
+    margin: 0 40px;
+ }
+/*
 .ploit{
 	width:90%; 
 	font-size:19px;
 	color:white;
-	text-align:center;
-	margin-top:120px  
+	display: flex;
+    justify-content: center;
 	border:1px solid transparent;
 
 	
-}
+}*/
+/*
 #imagen{
 	margin: 0 50px 0 0; 
 	position:absolute; 
@@ -208,18 +234,18 @@ h1{
 	bottom: 0;
 	top:0; 
 	opacity:0.7; 
-}
+}*/
 @keyframes vik{
-	0%{transform:translateX(-0%);}
-	33%{transform:translateX(-1%);}
+	10%{transform:translateX(0%);}
+	30%{transform:translateX(-100%);}
 	/*1.6667*/
 	
-	33.33%{transform:translateX(-98%);}
-	66.67%{transform:translateX(-100%);}
+	40%{transform:translateX(-100%);}
+	60%{transform:translateX(-100%);}
   
 	/*1.6667*/
 	
-	67%{transform:translateX(-198%);}
+	70%{transform:translateX(-200%);}
 	100%{transform:translateX(-200%);}
 
 	/*1.6667=5s*/
@@ -231,7 +257,7 @@ h1{
 
 /*.button{display:flex;}*/
 button{
-	margin:50px 0;		
+	margin:60px;		
 	width:120px;
   	height:40px;
 	border:none;
@@ -270,7 +296,7 @@ footer{
 /*para tablets*/
 @media screen and (max-width:840px){
 	 
-header,.menu,section,article,button{
+header,.menu,button{
 			
 	display:flex;
 	flex-flow:column wrap;
@@ -291,7 +317,7 @@ p{margin-top: 12px;}
 	align-items:center;
 			
 	}
-.menu li a {
+.menu li .losA {
 	display:inline-block;
 	width:100%;
 	margin:-2px;
@@ -305,26 +331,15 @@ h1{
 		
 }
 label,#lab{display:none;}	
-.ploit{padding:0 5px 0 0; }
-#imagen,#imagen1{
-	width:100%;
-	position:absolute; 
-	left: 0;
-	right: 0;
-	bottom: 0;
-	top:0; 
-	opacity:0.7; 
-}
-#imagen{;padding: 0 15px 0 10px;}
-#imagen1{padding-right: 6px;}
+
 
 
 /*phones*/
 @media screen and (max-width:500px){
 	
 body{background:;}
-header,.redes,.menu,article,section{display:flex;}	
-h1,{text-align:center;}
+header,.redes,.menu{display:flex;}	
+
 p{font-size:14px;}	
 .red{
 	width: 100%;
@@ -381,33 +396,25 @@ label{display:flex;}
 }
 .conte {
 	width:300%;
-	height:350px;
+	height:180px;
 	margin-top:0; 
 	display:flex;
 	overflow:hidden;
 }
-#imagen1,#imagen{
-	width: 400px;
-	position:absolute; 
-	left: 0px;
-	right: 0;
-	bottom: 0;
-	top:0; 
-	opacity:0.7; 
-}
+
 @keyframes vik{
-	0%{transform:translateX(-0%);}
-	33%{transform:translateX(-0%);}
+	10%{transform:translateX(0%);}
+	30%{transform:translateX(-100%);}
 	/*1.6667*/
 	
-	33.33%{transform:translateX(-100%);}
-	66.67%{transform:translateX(-100%);}
+	40%{transform:translateX(-100%);}
+	60%{transform:translateX(-100%);}
   
 	/*1.6667*/
 	
-	67%{transform:translateX(-208%);}
+	70%{transform:translateX(-200%);}
 	100%{transform:translateX(-200%);}
 
 	/*1.6667=5s*/
-}
+  }
 }
